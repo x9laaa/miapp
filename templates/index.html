@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro de Mensajes</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/foundation.min.css') }}">
+</head>
+<body>
+
+    <div class="top-bar">
+        <div class="top-bar-left">
+            <ul class="dropdown menu" data-dropdown-menu>
+                <li class="menu-text">📨 FlaskApp</li>
+                <li><a href="/">Registrar</a></li>
+                <li><a href="/mensajes">Ver mensajes</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="grid-container">
+        <div class="grid-x grid-padding-x align-center">
+            <div class="cell medium-8">
+                <h2>Enviar un Mensaje</h2>
+                <form method="POST">
+                    <label>Nombre:
+                        <input type="text" name="nombre" required>
+                    </label>
+                    <label>Asunto:
+                        <input type="text" name="asunto" required>
+                    </label>
+                    <label>Mensaje:
+                        <textarea name="cuerpo" rows="5" required></textarea>
+                    </label>
+                    <button class="button success expanded" type="submit">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mensajes Recibidos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/foundation.min.css') }}">
+</head>
+<body>
+
+    <div class="top-bar">
+        <div class="top-bar-left">
+            <ul class="dropdown menu" data-dropdown-menu>
+                <li class="menu-text">📨 FlaskApp</li>
+                <li><a href="/">Registrar</a></li>
+                <li><a href="/mensajes">Ver mensajes</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="grid-container">
+        <div class="grid-x grid-padding-x">
+            <div class="cell medium-12">
+                <h2>Mensajes Recibidos</h2>
+                <table class="hover striped">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Asunto</th>
+                            <th>Mensaje</th>
+                            <th>Fecha</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for mensaje in mensajes %}
+                        <tr>
+                            <td>{{ mensaje[0] }}</td>
+                            <td>{{ mensaje[1] }}</td>
+                            <td>{{ mensaje[2] }}</td>
+                            <td>{{ mensaje[3] }}</td>
+                        </tr>
+                        {% else %}
+                        <tr>
+                            <td colspan="4"><em>No hay mensajes aún.</em></td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
