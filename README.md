@@ -15,20 +15,16 @@ Esta es una aplicación Flask sencilla que permite registrar mensajes (nombre, a
 
 1. **Clona el repositorio**
 
-```bash
 git clone https://github.com/x9laaa/miapp.git
 cd miapp
 
 
 2. **Crea y activa un entorno virtual**
-```bash
 python3 -m venv venv
 source venv/bin/activate
 
-1. **Instala las dependencias**
-```bash
+3. **Instala las dependencias**
 pip install -r requirements.txt
 
-1. **Ejecutar la aplicación en modo producción local (con Gunicorn)**
-```bash
+4. **Ejecutar la aplicación en modo producción local (con Gunicorn)**
 gunicorn -w 4 -b 127.0.0.1:8000 app:app
